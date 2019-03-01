@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Teacher</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 <body>
-<h1>Teacher</h1>
+<h2 class="jumbotron">Teacher</h2>
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>School</th>
+        <th>Subject</th>
+        <th>Hours</th>
+        <th>Date of Work</th>
+        <th>Update Entry</th>
+    </tr>
+    <!--list entries-->
+{% for eachTeacher in teachers %}
+<tr>
+    <td>{{ eachTeacher.name}}</td>
+    <td>{{ eachTeacher.school}}</td>
+    <td>{{ eachTeacher.subject}}</td>
+    <td>{{ eachTeacher.hours}}</td>
+    <td>{{ eachTeacher.workDate}}</td>
+    <td><a href="{% url 'edit' eachTeacher.id %}"><button>Edit</button></a>
+        <a href="{% url 'delete' eachTeacher.id%}"><button>Delete</button></a></td>
+</tr>
+{% endfor %}
+</table>
 
 <a href="{% url 'index' %}" ><button>Back to Home</button></a>
 </body>

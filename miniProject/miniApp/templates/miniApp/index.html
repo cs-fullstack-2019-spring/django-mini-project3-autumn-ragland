@@ -7,7 +7,7 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<h2>Teacher Timetable</h2>
+<h2 class="jumbotron">Teacher Timetable</h2>
 <table class="table">
     <tr>
         <th>Name</th>
@@ -15,7 +15,6 @@
         <th>Subject</th>
         <th>Hours</th>
         <th>Date of Work</th>
-        <th>Date of Entry</th>
         <th>Update Entry</th>
     </tr>
     <!--iterate through objects in teacher model-->
@@ -26,7 +25,6 @@
         <td>{{ eachTeacher.subject}}</td>
         <td>{{ eachTeacher.hours}}</td>
         <td>{{ eachTeacher.workDate}}</td>
-        <td>{{ eachTeacher.entryDate}}</td>
         <td><a href="{% url 'edit' eachTeacher.id %}"><button>Edit</button></a>
         <a href="{% url 'delete' eachTeacher.id%}"><button>Delete</button></a></td>
     </tr>
@@ -39,3 +37,5 @@
 </a>
 </body>
 </html>
+
+<!--I really should have used template inheritance-->

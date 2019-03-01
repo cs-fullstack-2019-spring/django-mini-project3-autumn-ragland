@@ -6,7 +6,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     # add
     path('add/', views.add, name='add'),
-    # read
+    # read with filters
     path('listTeacher/<int:id>', views.listTeacher, name='listTeacher'),
     path('listSchool/<int:id>', views.listSchool, name='listSchool'),
     # update

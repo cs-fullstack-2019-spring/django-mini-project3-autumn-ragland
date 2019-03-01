@@ -5,12 +5,13 @@
     <title>Delete</title>
 </head>
 <body>
-<h2>Delete an Item</h2>
+<h2 class="jumbotron">Delete an Item</h2>
+<!--delete form with confirmation-->
 <form method="POST">
     {% csrf_token %}
     <h3>Are you sure you want to delete "{{ teacher }}" entry from "{{ teacher.entryDate }}"</h3>
     <br>
-    <button>Submit</button>
+    <button>YES</button>
 </form>
 <br>
 <a href="{% url 'index' %}"><button>CANCEL</button></a>

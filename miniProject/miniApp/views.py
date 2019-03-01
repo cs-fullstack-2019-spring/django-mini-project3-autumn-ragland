@@ -27,15 +27,25 @@ def add(request):
 
 # render html file listing all entries made by a specific by item ID
 def listTeacher(request, id):
-    return render(request, 'miniApp/listTeacher.html')
+    teacher = get_object_or_404(TeacherModel, pk=id)
+    teacher_items = TeacherModel.objects.filter(name=teacher.name)
+    context = {
+        'teachers': teacher_items
+    }
+    return render(request, 'miniApp/listTeacher.html', context)
 
 
 # render html file listing all entries made at a specific school by item ID
 def listSchool(request, id):
-    return render(request, 'miniApp/listSchool.html')
+    school = get_object_or_404(TeacherModel, pk=id)
+    school_items = TeacherModel.objects.filter(school=school.school)
+    context = {
+        'schools': school_items
+    }
+    return render(request, 'miniApp/listSchool.html', context)
 
 
-# edit item with form
+# render html file with item form and edit
 def edit(request, id):
     teacher_item = get_object_or_404(TeacherModel, pk=id)
     edit_form = TeacherForm(request.POST or None, instance=teacher_item)
