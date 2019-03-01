@@ -79,3 +79,9 @@ def challenge(request):
     return response
 # right now this is a text file that automatically downloads from the browser and
 # each object in the model displays as the name attribute
+
+# almost out of time but maybe a for loop iterating through each object in the model
+# to display all attributes instead of just 'to string' which I want to keep for the
+# rest of the project
+
+# I found the CSV function and general info on the django site but DID NOT copy paste :)
