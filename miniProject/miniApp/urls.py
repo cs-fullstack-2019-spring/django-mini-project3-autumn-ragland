@@ -13,4 +13,6 @@ urlpatterns = [
     path('edit/<int:id>', views.edit, name='edit'),
     # delete
     path('delete/<int:id>', views.delete, name='delete'),
+    # CSV
+    path('csv', views.challenge, name='challenge'),
 ]

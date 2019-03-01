@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .forms import TeacherForm
 from .models import TeacherModel
 from django.http import HttpResponse
+import csv
 
 
 # render html file with all teachers puller from model
@@ -68,3 +69,13 @@ def delete(request, id):
         'teacher': teacher_item
     }
     return render(request, 'miniApp/delete.html', context)
+
+
+# challenge : return comma separated values
+def challenge(request):
+    teacherValues = TeacherModel.objects.all()
+    response = HttpResponse(content_type='text/csv')
+    csv.writer(response).writerow(teacherValues)
+    return response
+# right now this is a text file that automatically downloads from the browser and
+# each object in the model displays as the name attribute
