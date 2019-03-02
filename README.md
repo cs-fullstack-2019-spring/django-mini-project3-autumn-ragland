@@ -1,3 +1,10 @@
+### POINTS: 2+
+### KEYCOMPLETE AND UTTER CRAP! Just kidding. Suberb job! Why haven't u been doing this the entire time?! :-P I know u r tired of hearing, but super de-duper proud of you! And not just because of your wit, though often depresssing and quite frankly, a buzz-kill, but instead because u r evolving into a real problem solver so naturally, and problem solving is what makes a good Engineer!
+
+PS Listen to my song list. You need to adopt good bands to get your code groove. At least try Bouncing Souls. I mean you got Lit so u leveled up on that song while everyone else perplexed, so might as well dive in.
+
+Again great stuff! 
+
 # Mini-Project Django
 
 THIS IS A SOLO PROJECT.
